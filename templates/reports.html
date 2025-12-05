@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTracker - Reports</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../assets/images/gimnasia.png" alt="FitTracker logo">
+        <span>FitTracker</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html">Dashboard</a>
+        <a href="workouts.html">Workouts</a>
+        <a href="schedule.html">Schedule</a>
+        <a class="active" href="reports.html">Reports</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="icon-btn">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container reports-page">
+
+    <!-- TITLE BAR -->
+    <div class="reports-header">
+      <h1>Progress Reports</h1>
+
+      <div class="header-actions">
+        <select class="filter-select">
+          <option>Last 30 Days</option>
+          <option>Last 60 Days</option>
+          <option>Last Year</option>
+        </select>
+
+        <button class="btn-outline">Export</button>
+      </div>
+    </div>
+
+    <!-- TOP CARDS -->
+    <section class="top-stats">
+
+      <div class="stat-card bigger">
+        <div class="stat-icon"><img src="../assets/images/ritmo-cardiaco.png"></div>
+        <div>
+          <p class="stat-title">Total Workouts</p>
+          <h2>47</h2>
+          <span class="stat-change positive">+12% from last month</span>
+        </div>
+      </div>
+
+      <div class="stat-card bigger">
+        <div class="stat-icon"><img src="../assets/images/reloj-de-pared.png"></div>
+        <div>
+          <p class="stat-title">Total Time</p>
+          <h2>42h</h2>
+          <span class="stat-change positive">+8% from last month</span>
+        </div>
+      </div>
+
+      <div class="stat-card bigger">
+        <div class="stat-icon"><img src="../assets/images/flechas.png"></div>
+        <div>
+          <p class="stat-title">Goals Achieved</p>
+          <h2>8/10</h2>
+          <span class="stat-change neutral">80% completion rate</span>
+        </div>
+      </div>
+
+      <div class="stat-card bigger">
+        <div class="stat-icon"><img src="../assets/images/fuego.png"></div>
+        <div>
+          <p class="stat-title">Current Streak</p>
+          <h2>7 days</h2>
+          <span class="stat-change positive">Personal best!</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- GRID PRINCIPAL -->
+    <section class="reports-grid">
+
+      <!-- FILA 1 - DOS COLUMNAS -->
+      <div class="report-box box-half">
+        <div class="report-header">
+          <h3>Workout Frequency</h3>
+          <select class="mini-select">
+            <option>Last 7 days</option>
+          </select>
+        </div>
+
+        <div class="fake-chart bars">
+          <div style="height:60%"></div>
+          <div style="height:80%"></div>
+          <div style="height:50%"></div>
+          <div style="height:70%"></div>
+          <div style="height:40%"></div>
+        </div>
+      </div>
+
+      <div class="report-box box-half">
+        <div class="report-header">
+          <h3>Strength Progress</h3>
+          <select class="mini-select">
+            <option>Bench Press</option>
+          </select>
+        </div>
+
+        <div class="fake-chart line-chart">
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <!-- FILA 2 - TRES COLUMNAS -->
+      <div class="report-box box-third">
+        <h3>Workout Types</h3>
+
+        <div class="legend">
+          <span class="dot blue"></span> Strength
+          <span class="dot green"></span> Cardio
+          <span class="dot orange"></span> HIIT
+          <span class="dot purple"></span> Flexibility
+        </div>
+
+        <div class="fake-chart pie">
+          <div class="slice one"></div>
+          <div class="slice two"></div>
+          <div class="slice three"></div>
+          <div class="slice1 four"></div>
+        </div>
+      </div>
+
+      <div class="report-box box-third">
+        <h3>Personal Records</h3>
+
+        <ul class="pr-list">
+          <li><span>Bench Press</span><strong>85kg</strong><span class="up">+5kg</span></li>
+          <li><span>Squat</span><strong>100kg</strong><span class="up">+10kg</span></li>
+          <li><span>Deadlift</span><strong>120kg</strong><span class="up">+15kg</span></li>
+          <li><span>5K Run</span><strong>22:30</strong><span class="up">-1:15</span></li>
+        </ul>
+      </div>
+
+      <div class="report-box box-third">
+        <h3>Monthly Goals</h3>
+
+        <div class="goal-row">
+          <div class="goal-label">Workout 20 times <span>16/20</span></div>
+          <div class="goal-bar"><div style="width:80%"></div></div>
+        </div>
+
+        <div class="goal-row">
+          <div class="goal-label">30 hours training <span class="colorazul">22/30</span></div>
+          <div class="goal-bar1"><div style="width:72%"></div></div>
+        </div>
+
+        <div class="goal-row">
+          <div class="goal-label">Increase bench by 10kg <span>5/10</span></div>
+          <div class="goal-bar2"><div style="width:50%"></div></div>
+        </div>
+
+        <div class="goal-row">
+          <div class="goal-label">Try 3 new exercises <span class="colorazul">3/3</span></div>
+          <div class="goal-bar1"><div style="width:100%"></div></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- HISTORIAL -->
+    <section class="history-box">
+
+      <h3>Recent Workout History</h3>
+
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Workout</th>
+            <th>Duration</th>
+            <th>Exercises</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Jan 17, 2024</td>
+            <td>Upper Body Strength</td>
+            <td>55 min</td>
+            <td>6 exercises</td>
+            <td>Completed</td>
+            <td>New PR on bench press!</td>
+          </tr>
+
+          <tr>
+            <td>Jan 15, 2024</td>
+            <td>Leg Day Power</td>
+            <td>62 min</td>
+            <td>8 exercises</td>
+            <td>Completed</td>
+            <td>Felt strong today</td>
+          </tr>
+
+          <tr>
+            <td>Jan 13, 2024</td>
+            <td>HIIT Cardio</td>
+            <td>28 min</td>
+            <td>5 exercises</td>
+            <td>Completed</td>
+            <td>High intensity session</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button class="btn-outline small">Previous</button>
+        <button class="btn-outline small">Next</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
