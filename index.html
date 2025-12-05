@@ -1,13 +1,115 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fittracker-ui</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTracker - Dashboard</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="assets/images/gimnasia.png" alt="FitTracker logo">
+        <span>FitTracker</span>
+      </div>
+
+      <nav class="main-nav">
+        <a class="active" href="index.html">Dashboard</a>
+        <a href="./templates/workouts.html">Workouts</a>
+        <a href="templates/schedule.html">Schedule</a>
+        <a href="templates/reports.html">Reports</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="icon-btn">
+          <img src="assets/images/campana.png" alt="Notificaciones">
+        </button>
+        <img class="avatar" src="assets/images/usuario.png" alt="Avatar">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN DASHBOARD -->
+  <main class="container dashboard">
+
+    <h1 class="greeting">Welcome back, John!</h1>
+
+    <!-- 4 STAT CARDS -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <p>Total Workouts</p>
+        <h2>47</h2>
+      </div>
+      <div class="stat-card">
+        <p>This Week</p>
+        <h2>3</h2>
+      </div>
+      <div class="stat-card">
+        <p>Personal Records</p>
+        <h2>12</h2>
+      </div>
+      <div class="stat-card">
+        <p>Current Streak</p>
+        <h2>7 days</h2>
+      </div>
+    </section>
+
+    <!-- MAIN ACTION CARDS -->
+    <section class="action-grid">
+      <article class="action-card primary">
+        <h3>Create Workout</h3>
+        <p>Create your next training session</p>
+        <button class="btn-primary">Get Started</button>
+      </article>
+
+      <article class="action-card">
+        <h3>My Workouts</h3>
+        <p>Manage your workout plans</p>
+        <a class="link-btn" href="templates/workouts.html">View All</a>
+      </article>
+
+      <article class="action-card">
+        <h3>Schedule</h3>
+        <p>Plan your upcoming sessions</p>
+        <button class="btn-outline">Schedule Now</button>
+      </article>
+    </section>
+
+    <section class="dashboard-lists">
+      
+      <div class="recent-activity">
+        <h3>Recent Activity</h3>
+        <ul>
+          <li>Completed Full Body Workout · 3 days ago</li>
+          <li>Created a Leg Day Routine · 1 week ago</li>
+          <li>Hit Personal PR on Bench Press · 2 days ago</li>
+        </ul>
+      </div>
+
+      <div class="upcoming-workouts">
+        <h3>Upcoming Workouts</h3>
+        <div class="up-card">
+          <p>Upper Body Strength</p>
+          <span>Tomorrow · 7:00 AM</span>
+        </div>
+
+        <div class="up-card">
+          <p>Cardio Session</p>
+          <span>Thursday · 6:30 PM</span>
+        </div>
+
+        <div class="up-card">
+          <p>Leg Day Power</p>
+          <span>Friday · 7:30 AM</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
 </html>
