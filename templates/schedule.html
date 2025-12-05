@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTracker - Workout Schedule</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../assets/images/gimnasia.png" alt="FitTracker logo">
+        <span>FitTracker</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html">Dashboard</a>
+        <a href="./workouts.html">Workouts</a>
+        <a class="active" href="./schedule.html">Schedule</a>
+        <a href="./reports.html">Reports</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="icon-btn">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container schedule-page">
+
+    <div class="page-header">
+      <div>
+        <h1>Workout Schedule</h1>
+        <p class="subtitle">Plan and manage your training sessions</p>
+      </div>
+
+      <a href="./create.html" class="btn-primary schedule-btn">+ Schedule Workout</a>
+    </div>
+
+    <!-- TABS -->
+    <div class="schedule-tabs">
+      <button class="tab active">Month</button>
+      <button class="tab">Week</button>
+      <button class="tab">Day</button>
+    </div>
+
+    <!-- CALENDAR -->
+    <section class="calendar-box">
+
+      <div class="calendar-header">
+        <button class="cal-btn">‹</button>
+        <h2>January 2024</h2>
+        <button class="cal-btn">›</button>
+      </div>
+
+      <!-- Calendar Grid -->
+      <div class="calendar-grid">
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+
+        <!-- Week 1 -->
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="cal-day">1</div>
+        <div class="cal-day">2</div>
+        <div class="cal-day">
+          3
+          <span class="event green">Upper Body</span>
+        </div>
+        <div class="cal-day">4</div>
+        <div class="cal-day">5</div>
+
+        <!-- Week 2 -->
+        <div class="cal-day">6</div>
+        <div class="cal-day">7</div>
+        <div class="cal-day">
+          8
+          <span class="event purple">Cardio</span>
+        </div>
+        <div class="cal-day">9</div>
+        <div class="cal-day">10</div>
+        <div class="cal-day">
+          11
+          <span class="event blue">Leg Day</span>
+        </div>
+        <div class="cal-day">12</div>
+
+        <!-- Week 3 -->
+        <div class="cal-day">13</div>
+        <div class="cal-day">14</div>
+        <div class="cal-day">15</div>
+        <div class="cal-day">
+          16
+          <span class="event purple">Cardio</span>
+        </div>
+        <div class="cal-dayb">17
+          <span class="event blue">Upper Body 6PM</span>
+        </div>
+        <div class="cal-day">18</div>
+        <div class="cal-day">19</div>
+
+        <!-- Week 4 -->
+        <div class="cal-day">20</div>
+        <div class="cal-day">
+          21
+          <span class="event green">Upper Body</span>
+        </div>
+        <div class="cal-day">22</div>
+        <div class="cal-day">23</div>
+        <div class="cal-day">24</div>
+        <div class="cal-day">
+          25
+          <span class="event blue">Leg Day</span>
+        </div>
+        <div class="cal-day">26</div>
+
+        <!-- Week 5 -->
+        <div class="cal-day">27</div>
+        <div class="cal-day">28</div>
+        <div class="cal-day">29</div>
+        <div class="cal-day">30</div>
+        <div class="cal-day">31</div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+
+    </section>
+
+    <!-- UPCOMING -->
+    <section class="upcoming-box">
+      <h3>Upcoming Workouts</h3>
+
+      <div class="upcoming-item green">
+        <p>Upper Body Strength</p>
+        <span>Tomorrow · 7:00 AM</span>
+      </div>
+
+      <div class="upcoming-item purple">
+        <p>Cardio Session</p>
+        <span>Thursday · 6:30 PM</span>
+      </div>
+
+      <div class="upcoming-item blue">
+        <p>Leg Day Power</p>
+        <span>Friday · 7:30 AM</span>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
