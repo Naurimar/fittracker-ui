@@ -1,0 +1,961 @@
+/* ==============================
+   TIPOGRAFÍA Y VARIABLES
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #f7f8fa;
+  --white: #ffffff;
+  --text: #1e293b;
+  --text-light: #6b7280;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 
+                 0px 4px 6px rgba(0, 0, 0, 0.04);
+  --radius: 10px;
+  --container: 1200px;
+}
+
+/* ==============================
+   RESET Y BASE
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==============================
+   HEADER / NAVBAR
+============================== */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-light);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: #eef2ff;
+  color: var(--primary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==============================
+   DASHBOARD – TÍTULO
+============================== */
+.dashboard {
+  padding: 40px 0;
+}
+
+.greeting {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+/* ==============================
+   GRID – 4 STATS (Figma exacto)
+============================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 22px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.stat-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* ==============================
+   3 ACTION CARDS
+============================== */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.action-card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+.action-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.action-card p {
+  color: var(--text-black);
+  margin: 6px 0 16px;
+}
+
+.primary {
+  border-left: 5px solid var(--primary);
+  background-color: #2650c4;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ==============================
+   RECENT + UPCOMING GRID
+============================== */
+.dashboard-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 15px;
+}
+
+.recent-activity,
+.upcoming-workouts {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 22px;
+}
+
+.recent-activity h3,
+.upcoming-workouts h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.recent-activity ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent-activity li {
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+.up-card {
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+
+.up-card p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.up-card span {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid,
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    display: none; /* el Figma no muestra menú mobile */
+  }
+}
+
+/* ==============================
+   MY WORKOUTS PAGE
+============================== */
+
+.workouts-page {
+  padding: 40px 0;
+}
+
+/* Header section */
+.workouts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.workouts-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* Create workout button */
+.create-btn {
+  padding: 10px 18px;
+  font-size: 15px;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: var(--radius);
+  margin-bottom: 25px;
+  box-shadow: var(--card-shadow);
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 15px;
+}
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.btn-outline.small {
+  padding: 10px 14px;
+}
+
+/* Workout cards */
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.workout-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.workout-meta {
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 8px 0 4px;
+}
+
+.last-done {
+  color: var(--text-light);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .workout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ==============================
+   CREATE WORKOUT PAGE
+============================== */
+
+.create-page {
+  padding: 40px 0;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.create-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section-title {
+  margin-top: 35px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Form layout */
+.workout-form {
+  background: var(--white);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background: #fff;
+}
+
+textarea {
+  height: 95px;
+  resize: vertical;
+}
+
+/* Exercises */
+.exercise-box {
+  padding: 22px;
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.exercise-box h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.exercise-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.form-group.small input {
+  width: 100%;
+}
+
+/* buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+/* ==============================
+   WORKOUT SCHEDULE PAGE
+============================== */
+
+.schedule-page {
+  padding: 40px 0;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-btn {
+  padding: 10px 18px;
+}
+
+/* Tabs */
+.schedule-tabs {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.tab {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* Calendar box */
+.calendar-box {
+  background: white;
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+/* Calendar header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.cal-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.calendar-header h2 {
+  font-size: 22px;
+}
+
+/* Calendar grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 14px;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.cal-day {
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  padding: 10px;
+  min-height: 90px;
+  font-weight: 500;
+  position: relative;
+}
+.cal-dayb {
+  background: rgba(0, 0, 255, 0.07);
+  border: 2px solid var(--border);
+  padding: 10px;
+  min-height: 90px;
+  font-weight: 500;
+  position: relative;
+  border-color: #2286ea ;
+}
+
+.empty {
+  background: transparent;
+}
+
+/* Events inside days */
+.event {
+  display: block;
+  font-size: 12px;
+  padding: 4px 6px;
+  margin-top: 6px;
+  border-radius: var(--radius);
+  color: white;
+  font-weight: 600;
+}
+
+.green { background: #22c55e; }
+.purple { background: #a855f7; }
+.blue { background: #3b82f6; }
+
+/* Upcoming section */
+.upcoming-box {
+  margin-top: 35px;
+  background: white;
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+.upcoming-box h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.upcoming-item {
+  padding: 14px;
+  border-radius: var(--radius);
+  color: white;
+  margin-bottom: 12px;
+}
+
+.upcoming-item p {
+  font-weight: 600;
+}
+
+.upcoming-item span {
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .calendar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===========================================
+   REPORTS PAGE - FINAL CORREGIDO
+=========================================== */
+
+.reports-page {
+  padding: 40px 0;
+}
+
+/* HEADER */
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* TOP CARDS */
+.top-stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 22px;
+  margin: 28px 0;
+}
+
+.stat-card.bigger {
+  display: flex;
+  gap: 14px;
+  padding: 22px;
+}
+
+.stat-icon img { width: 30px; }
+.stat-title { font-size: 14px; color: var(--text-light); }
+.stat-change { font-size: 13px; }
+.stat-change.positive { color:#16a34a; }
+.stat-change.neutral { color:#6b7280; }
+
+/* ===========================================
+   🌟 GRID PRINCIPAL – EXACTA AL FIGMA 🌟
+=========================================== */
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas virtuales */
+  gap: 22px;
+  margin-top: 20px;
+}
+
+/* FILA 1: 50% + 50% */
+.box-half {
+  grid-column: span 3; /* 3/6 columnas */
+}
+
+/* FILA 2: 33% + 33% + 33% */
+.box-third {
+  grid-column: span 2; /* 2/6 columnas */
+}
+
+/* ============= Responsive ============= */
+
+/* Tablets */
+@media (max-width: 1100px) {
+  .reports-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box-half {
+    grid-column: span 3; /* se apilan */
+  }
+
+  .box-third {
+    grid-column: span 1; /* 3 columnas iguales */
+  }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .box-half, .box-third {
+    grid-column: span 1; /* todo apilado */
+  }
+}
+
+/* ===========================================
+   CONTENIDO DE LAS CAJAS
+=========================================== */
+
+.report-box {
+  background: white;
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* BAR CHART */
+.fake-chart.bars {
+  display:flex;
+  align-items:flex-end;
+  gap:12px;
+  height:160px;
+}
+.fake-chart.bars div {
+  width:32px;
+  background:#3b82f6;
+  border-radius:6px;
+}
+
+/* LINE CHART */
+.fake-chart.line-chart {
+  height:160px;
+  background:#eef2ff;
+  border-radius:var(--radius);
+  position:relative;
+}
+.line {
+  width:80%;
+  height:3px;
+  background:#2563eb;
+  position:absolute;
+  left:10%;
+  top:60%;
+  transform:rotate(-15deg);
+}
+
+/* PIE CHART */
+.fake-chart.pie {
+  width:160px;
+  height:160px;
+  margin:auto;
+  border-radius:50%;
+  position:relative;
+  border:12px solid #f3f4f6;
+}
+
+.slice {
+  position:absolute;
+  width:100%;
+  height:100%;
+  clip-path:polygon(50% 50%, 100% 0, 100% 70%);
+  border-radius:50%;
+}
+.slice1 {
+  position:absolute;
+  width:100%;
+  height:100%;
+  clip-path:polygon(50% 50%, 100% 0, 100% 30%);
+  border-radius:50%;
+}
+
+.slice.one { background:#3b82f6; transform:rotate(0deg); }
+.slice.two { background:#22c55e; transform:rotate(90deg); }
+.slice.three { background:#f59e0b; transform:rotate(180deg); }
+.slice1.four { background:#ea0505; transform:rotate(270deg); }
+
+/* LEGEND */
+.legend {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.dot {
+  width:10px;
+  height:10px;
+  border-radius:50%;
+}
+
+/* PERSONAL RECORDS */
+.pr-list {
+  list-style:none;
+  margin-top:12px;
+}
+.pr-list li {
+  display:flex;
+  justify-content:space-between;
+  padding:8px 0;
+}
+.up { color:#16a34a; }
+
+/* GOALS */
+.goal-row { margin-bottom:16px; }
+
+.goal-label {
+  display:flex;
+  justify-content:space-between;
+  font-weight:500;
+}
+.goal-bar {
+  background:#e5e7eb;
+  height:10px;
+  border-radius:var(--radius);
+  margin-top:4px;
+}
+.goal-bar1 {
+  background:#e5e7eb;
+  height:10px;
+  border-radius:var(--radius);
+  margin-top:4px;
+}
+.goal-bar2 {
+  background:#e5e7eb;
+  height:10px;
+  border-radius:var(--radius);
+  margin-top:4px;
+}
+.goal-bar div {
+  height:100%;
+  background:#2563eb;
+  border-radius:var(--radius);
+}
+.goal-bar1 div {
+  height:100%;
+  background:#0bb625;
+  border-radius:var(--radius);
+}
+.goal-bar2 div {
+  height:100%;
+  background:#f1be08;
+  border-radius:var(--radius);
+}
+
+/* TABLE */
+.history-box {
+  margin-top:35px;
+  padding:28px;
+  background:white;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+}
+
+.history-table {
+  width:100%;
+  border-collapse:collapse;
+  margin-top:14px;
+}
+
+.history-table th {
+  background:#f8fafc;
+  padding:14px;
+  font-size:14px;
+  color:var(--text-light);
+  text-align:left;
+}
+
+.history-table td {
+  padding:12px 14px;
+  border-bottom:1px solid var(--border);
+}
+
+.history-table tr:hover {
+  background:#f9fafb;
+}
+
+/* PAGINATION */
+.pagination {
+  margin-top:18px;
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+}
