@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTracker - My Workouts</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../assets/images/gimnasia.png" alt="FitTracker logo">
+        <span>FitTracker</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html">Dashboard</a>
+        <a class="active" href="workouts.html">Workouts</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+
+      <div class="header-right">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container workouts-page">
+
+    <div class="workouts-header">
+      <div>
+        <h1>My Workouts</h1>
+        <p class="subtitle">Manage and track your workout plans</p>
+      </div>
+
+      <a href="create.html" class="btn-primary create-btn">+ Create Workout</a>
+    </div>
+
+    <!-- Search + Filters -->
+    <div class="filter-bar">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Search workouts..."
+      >
+
+      <select class="filter-select">
+        <option>All Types</option>
+        <option>Strength</option>
+        <option>Cardio</option>
+        <option>Custom</option>
+      </select>
+
+      <button class="btn-outline small">More Filters</button>
+    </div>
+
+    <!-- WORKOUT CARDS -->
+    <section class="workout-grid">
+
+      <article class="workout-card">
+        <h3>Upper Body Strength</h3>
+        <p class="workout-meta">45 minutes · 6 exercises</p>
+        <p class="last-done">Last completed: Today</p>
+        <button class="btn-primary full-btn">Start Workout</button>
+      </article>
+
+      <article class="workout-card">
+        <h3>Leg Day Power</h3>
+        <p class="workout-meta">60 minutes · 7 exercises</p>
+        <p class="last-done">Last completed: 1 week ago</p>
+        <button class="btn-primary full-btn">Start Workout</button>
+      </article>
+
+      <article class="workout-card">
+        <h3>HIIT Cardio Blast</h3>
+        <p class="workout-meta">30 minutes · 5 exercises</p>
+        <p class="last-done">Last completed: 2 weeks ago</p>
+        <button class="btn-primary full-btn">Start Workout</button>
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
