@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTracker - Create Workout</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../assets/images/gimnasia.png" alt="FitTracker logo">
+        <span>FitTracker</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="../index.html">Dashboard</a>
+        <a href="./workouts.html">Workouts</a>
+        <a href="./schedule.html">Schedule</a>
+        <a href="./reports.html">Reports</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="icon-btn">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container create-page">
+
+    <!-- Breadcrumb -->
+    <a href="workouts.html" class="back-link">← Back to Workouts</a>
+
+    <h1>Create New Workout</h1>
+    <p class="subtitle">Design your custom workout plan</p>
+
+    <!-- FORM -->
+    <form class="workout-form">
+
+      <!-- Workout Name -->
+      <div class="form-group">
+        <label>Workout Name</label>
+        <input type="text" placeholder="e.g. Upper Body Strength">
+      </div>
+
+      <!-- Workout Type -->
+      <div class="form-group">
+        <label>Workout Type</label>
+        <select>
+          <option>Select Type</option>
+          <option>Strength</option>
+          <option>Cardio</option>
+          <option>Custom</option>
+        </select>
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label>Description (optional)</label>
+        <textarea placeholder="Write details about your workout..."></textarea>
+      </div>
+
+      <!-- EXERCISES SECTION -->
+      <h2 class="section-title">Exercises</h2>
+
+      <div class="exercise-box">
+        <h3>Exercise 1</h3>
+
+        <div class="form-group">
+          <label>Exercise Name</label>
+          <input type="text" placeholder="e.g. Bench Press">
+        </div>
+
+        <div class="form-group">
+          <label>Muscle Group</label>
+          <select>
+            <option>Select muscle group</option>
+            <option>Chest</option>
+            <option>Back</option>
+            <option>Legs</option>
+            <option>Arms</option>
+            <option>Shoulders</option>
+          </select>
+        </div>
+
+        <div class="exercise-row">
+          <div class="form-group small">
+            <label>Sets</label>
+            <input type="number" placeholder="4">
+          </div>
+
+          <div class="form-group small">
+            <label>Reps</label>
+            <input type="number" placeholder="10">
+          </div>
+
+          <div class="form-group small">
+            <label>Rest Time (seconds)</label>
+            <input type="number" placeholder="60">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- buttons -->
+      <div class="form-buttons">
+        <button class="btn-outline">Save as Draft</button>
+        <button class="btn-primary">Create Workout</button>
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+</html>
